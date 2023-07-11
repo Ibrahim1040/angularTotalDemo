@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'total-demo';
+  actions : Array<any> =[
+    { title : "Home", "route":"/home",icon : "house"},
+    { title : "Products", "route":"/products",icon : "search"},
+    { title : "NewProduct", "route":"/newProduct",icon : "safe"}
+  ]
 }
