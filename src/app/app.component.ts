@@ -10,5 +10,10 @@ export class AppComponent {
     { title : "Home", "route":"/home",icon : "house"},
     { title : "Products", "route":"/products",icon : "search"},
     { title : "NewProduct", "route":"/newProduct",icon : "safe"}
-  ]
+  ];
+  currentAction: any;
+
+  setCurrentAction(action: any){
+    this.currentAction = action;
+  }
 }
