@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Computer",
+      "price": 5600,
+      "checked": false
+    },
+    {
+      "id": 3,
+      "name": "Screen",
+      "price": 680,
+      "checked": true
+    },
+    {
+      "id": 4,
+      "name": "Smart Phone",
+      "price": 6600,
+      "checked": false
+    },
+    {
+      "id": 5,
+      "name": "Mouse",
+      "price": 100,
+      "checked": true
+    },
+    {
+      "name": "ahahahhaha",
+      "price": "55540",
+      "checked": true,
+      "id": 6
+    },
+    {
+      "name": "Ibra",
+      "price": "6500",
+      "checked": false,
+      "id": 7
+    }
+  ]
+}
