@@ -7,11 +7,12 @@ import { Product } from '../model/product.model';
   providedIn: 'root'
 })
 export class ProductService {
+  
 
   constructor(private http : HttpClient) { }
 
-  public getProduct(page:number=1,size:number=4):Observable<Array<Product>>{
-    return this.http.get<Array<Product>>(`http://localhost:8089/products?_page=${page}&_limit=${size}`);
+  public searchProducts(keyword:string="",page:number=1,size:number=4){
+    return this.http.get<Product[]>(`http://localhost:8089/products?name_like=${keyword}&_page=${page}&_limit=${size}`,{observe:`response`});
   }
 
   public checkProduct(product:Product):Observable<Product>{
@@ -27,8 +28,12 @@ export class ProductService {
     return this.http.post<Product>(`http://localhost:8089/products`,
     product);
   }
-
-  public searchProducts(keyword:string):Observable<Array<Product>>{
-    return this.http.get<Array<Product>>(`http://localhost:8089/products?name_like=${keyword}`);
+  getproductById(productId: number): Observable<Product>{
+   return this.http.get<Product>(`http://localhost:8089/products/${productId}`);
+  }
+  updateProduct(product: Product): Observable<Product>{
+    return this.http.put<Product>(`http://localhost:8089/products/${product.id}`,product); {
+    
+    }
   }
 }
